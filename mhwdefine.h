@@ -17,6 +17,7 @@
 #define CONVER(X) #X
 //6
 #define CALL(F,P) (printf("call function %s ",#F,f(p)))
-
+//7
+#define STRUCT(type) typedef struct _mhw_##type type;struct _mhw_##type {char *name;int age;};
 
 #endif

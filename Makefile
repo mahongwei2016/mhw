@@ -1,5 +1,5 @@
 name=test
-all:1.o
+all:main.o
 	gcc -g $^ -o $(name)
 %.o:%.c
 	gcc -g -c $^ -o $@
