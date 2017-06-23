@@ -8,5 +8,7 @@ typedef struct _softarray
     int array[];
 }softarray;
 softarray* creat_soft_array(int len);
+void fac(softarray* sa);
 void delet_soft_array(softarray* sa);
+void print_softarry(softarray* sa);
 #endif

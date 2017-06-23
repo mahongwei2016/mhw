@@ -1,8 +1,10 @@
 name=test
 all:main.o
-	gcc -g $^ -o $(name) -Iinclude -Llib
+	make -C ./lib
+	gcc -g  -o $(name) $^ -I${PWD}/include -L${PWD}/lib -lmhw
 %.o:%.c
-	gcc -g -c $^ -o $@ -Iinclude -Llib
+	gcc -g -c $^ -o $@ -Iinclude
 .PHONY:clean
 clean:
+	make -C lib clean
 	rm $(name) *.o

@@ -1,4 +1,5 @@
 #include "softarray.h"
+#include "mhwdefine.h"
 #include <stdlib.h>
 softarray* creat_soft_array(int len)
 {
@@ -31,6 +32,14 @@ void fac(softarray* sa)
 	for(i=2;i<sa->len;i++)
 		sa->array[i]=sa->array[i-2]+sa->array[i-1];	
 	}
+}
+void print_softarry(softarray* sa)
+{
+    int i=0;
+    printf("softarray %s:\n",CONVER(sa));
+    for(i=0;i<sa->len;i++)
+	printf("%d ",sa->array[i]);
+    printf("\n");
 }	
 int main(int argc,char* argv[])
 {
