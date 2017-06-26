@@ -11,7 +11,7 @@
 	mhw_ti=localtime(&mhw_t);	\
 	printf("%s[%s:%d]:%s\n",asctime(mhw_ti),__FILE__,__LINE__,s);\
 	}while(0)
-#define mhw_buffer[100][1000];
+#define mhw_buffer [100][1000];
 //typedef struct __sdb{}sdb;sdb *s=mhw_buffer;   //the start addr of mhw_buffer equal s
 //5
 #define CONVER(X) #X
