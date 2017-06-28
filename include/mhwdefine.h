@@ -19,5 +19,11 @@
 #define CALL(F,P) (printf("call function %s ",#F,f(p)))
 //7
 #define STRUCT(type) typedef struct _mhw_##type type;struct _mhw_##type {char *name;int age;};
+//8
+#ifdef printf_function
+#define printf_function(); printf("%s begin\n",__FUNCTION__);
+#else
+#define printf_function(); 
+#endif
 
 #endif
